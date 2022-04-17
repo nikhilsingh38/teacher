@@ -1,9 +1,10 @@
 import express from 'express';
 
+import { getPosts, craetePost } from "../controllers/posts.js";
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send("hello")
-});
+router.get('/', getPosts);
+router.get("/", craetePost);
 
 export default router;
